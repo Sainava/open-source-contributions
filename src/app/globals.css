@@ -519,9 +519,9 @@ body {
 }
 
 .inner {
-  --w: 320px;
-  --h: 450px;
-  --translateZ: 380px;
+  --w: 360px;
+  --h: 500px;
+  --translateZ: 430px;
   --rotateX: 0deg;
   --perspective: 1500px;
   position: relative;
@@ -529,7 +529,7 @@ body {
   height: var(--h);
   transform-style: preserve-3d;
   transform: perspective(var(--perspective));
-  animation: rotating 25s linear infinite;
+  animation: rotating 15s linear infinite;
 }
 
 @keyframes rotating {
