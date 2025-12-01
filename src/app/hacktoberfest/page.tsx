@@ -1,15 +1,40 @@
 export default function Hacktoberfest() {
   const prs = [
-    { repo: "facebook/react", title: "Fix useState hook memory leak", tag: "Bugfix", url: "https://github.com/facebook/react/pull/1" },
-    { repo: "vercel/next.js", title: "Add new routing feature", tag: "Feature", url: "https://github.com/vercel/next.js/pull/2" },
-    { repo: "microsoft/vscode", title: "Update API documentation", tag: "Docs", url: "https://github.com/microsoft/vscode/pull/3" },
-    { repo: "nodejs/node", title: "Improve performance", tag: "Feature", url: "https://github.com/nodejs/node/pull/4" },
-    { repo: "tailwindlabs/tailwindcss", title: "Fix grid spacing", tag: "Bugfix", url: "https://github.com/tailwindlabs/tailwindcss/pull/5" },
-    { repo: "sveltejs/svelte", title: "Add TypeScript support", tag: "Feature", url: "https://github.com/sveltejs/svelte/pull/6" },
-    { repo: "angular/angular", title: "Fix form validation", tag: "Bugfix", url: "https://github.com/angular/angular/pull/7" },
-    { repo: "vuejs/vue", title: "Update guide", tag: "Docs", url: "https://github.com/vuejs/vue/pull/8" },
-    { repo: "webpack/webpack", title: "Add new loader", tag: "Feature", url: "https://github.com/webpack/webpack/pull/9" },
-    { repo: "prettier/prettier", title: "Fix formatting issue", tag: "Bugfix", url: "https://github.com/prettier/prettier/pull/10" },
+    { 
+      repo: "Heisen47/itinerarly", 
+      title: "Centralize Gemini error handling with retry & timeout", 
+      url: "https://github.com/Heisen47/itinerarly/pull/170" 
+    },
+    { 
+      repo: "Pritam-nitj/ChatApp", 
+      title: "Prevent image upload crash & render messages instantly", 
+      url: "https://github.com/Pritam-nitj/ChatApp/pull/50" 
+    },
+    { 
+      repo: "lingdojo/kana-dojo", 
+      title: "Import/export user settings and stats (backup/restore)", 
+      url: "https://github.com/lingdojo/kana-dojo/pull/65" 
+    },
+    { 
+      repo: "amananandrai/document-editor-with-tiptap", 
+      title: "Derive currentPageIndex from functional updates", 
+      url: "https://github.com/amananandrai/document-editor-with-tiptap/pull/97" 
+    },
+    { 
+      repo: "RabindranathChanda/Student_Management_System", 
+      title: "Add baseline versioned schema scripts with seed placeholder", 
+      url: "https://github.com/RabindranathChanda/Student_Management_System/pull/23" 
+    },
+    { 
+      repo: "alirezazim03/OpenUI-Library", 
+      title: "Add client-side tag filtering to components list", 
+      url: "https://github.com/alirezazim03/OpenUI-Library/pull/74" 
+    },
+    { 
+      repo: "ajaynegi45/Old-School-Game", 
+      title: "Add Simon Says memory sequence game", 
+      url: "https://github.com/ajaynegi45/Old-School-Game/pull/120" 
+    },
   ];
 
   const colors = [
@@ -20,23 +45,7 @@ export default function Hacktoberfest() {
     "252, 252, 142",
     "252, 208, 142",
     "252, 142, 142",
-    "252, 142, 239",
-    "204, 142, 252",
-    "142, 202, 252",
   ];
-
-  const getTagColor = (tag: string) => {
-    switch (tag) {
-      case "Bugfix":
-        return "bg-red-500";
-      case "Feature":
-        return "bg-green-500";
-      case "Docs":
-        return "bg-blue-500";
-      default:
-        return "bg-gray-500";
-    }
-  };
 
   return (
     <div className="min-h-screen bg-[#171717] flex items-center justify-center p-8">
@@ -52,7 +61,7 @@ export default function Hacktoberfest() {
               style={
                 {
                   "--index": index,
-                  "--color-card": colors[index],
+                  "--color-card": colors[index % colors.length],
                 } as React.CSSProperties
               }
             >
@@ -60,7 +69,7 @@ export default function Hacktoberfest() {
                 <div className="card-content">
                   <div className="repo-name">{pr.repo}</div>
                   <div className="pr-title">{pr.title}</div>
-                  <span className={`tag ${getTagColor(pr.tag)}`}>{pr.tag}</span>
+                  <button className="github-button">View on GitHub</button>
                 </div>
               </div>
             </a>
