@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-black font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center py-32 px-16 bg-black">
+      <main className="flex w-full max-w-3xl flex-col items-center gap-12 py-32 px-16 bg-black">
         <div className="voltage-heading">
           <h1>Open Source Contributions</h1>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 234.6 61.3" preserveAspectRatio="none" xmlSpace="preserve">
@@ -31,6 +31,32 @@ export default function Home() {
             <div className="dot dot-4"></div>
             <div className="dot dot-5"></div>
           </div>
+        </div>
+
+        <div className="glitch-checkbox-wrapper">
+          <label className="glitch-checkbox-container">
+            <input type="checkbox" name="hacktoberfest" />
+            <div className="checkbox-box">
+              <div className="checkbox-mark"></div>
+            </div>
+            <span className="checkbox-label" data-text="HACKTOBERFEST">HACKTOBERFEST</span>
+          </label>
+
+          <label className="glitch-checkbox-container">
+            <input type="checkbox" name="osci" />
+            <div className="checkbox-box">
+              <div className="checkbox-mark"></div>
+            </div>
+            <span className="checkbox-label" data-text="OPEN_SOURCE_CONNECT_INDIA">OPEN_SOURCE_CONNECT_INDIA</span>
+          </label>
+
+          <label className="glitch-checkbox-container">
+            <input type="checkbox" name="ssoc" />
+            <div className="checkbox-box">
+              <div className="checkbox-mark"></div>
+            </div>
+            <span className="checkbox-label" data-text="SOCIAL_SUMMER_OF_CODE">SOCIAL_SUMMER_OF_CODE</span>
+          </label>
         </div>
       </main>
     </div>
