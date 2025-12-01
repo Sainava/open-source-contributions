@@ -175,6 +175,117 @@ body {
   }
 }
 
+/* --- 3D Carousel Styles --- */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.inner {
+  --w: 320px;
+  --h: 450px;
+  --translateZ: 500px;
+  --rotateX: 0deg;
+  --perspective: 1500px;
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective));
+  animation: rotating 25s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(0);
+  }
+  to {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(1turn);
+  }
+}
+
+.card {
+  position: absolute;
+  border: 3px solid rgba(var(--color-card));
+  border-radius: 16px;
+  overflow: hidden;
+  inset: 0;
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  backface-visibility: hidden;
+}
+
+.card:hover {
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(calc(var(--translateZ) + 50px)) scale(1.1);
+  border-width: 4px;
+  box-shadow: 0 0 30px rgba(var(--color-card), 0.8);
+  z-index: 10;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #0000
+    radial-gradient(
+      circle,
+      rgba(var(--color-card), 0.2) 0%,
+      rgba(var(--color-card), 0.6) 80%,
+      rgba(var(--color-card), 0.9) 100%
+    );
+  display: flex;
+  align-items: center;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.repo-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.95;
+  word-break: break-word;
+}
+
+.pr-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: break-word;
+  padding: 0 1rem;
+}
+
+.tag {
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+} font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* --- Glitch Checkbox Styles --- */
 .glitch-checkbox-wrapper {
   --bg-color: #0d0d0d;

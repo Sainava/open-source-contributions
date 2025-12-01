@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -34,29 +35,35 @@ export default function Home() {
         </div>
 
         <div className="glitch-checkbox-wrapper">
-          <label className="glitch-checkbox-container">
-            <input type="checkbox" name="hacktoberfest" />
-            <div className="checkbox-box">
-              <div className="checkbox-mark"></div>
-            </div>
-            <span className="checkbox-label" data-text="HACKTOBERFEST">HACKTOBERFEST</span>
-          </label>
+          <Link href="/hacktoberfest">
+            <label className="glitch-checkbox-container">
+              <input type="checkbox" name="hacktoberfest" />
+              <div className="checkbox-box">
+                <div className="checkbox-mark"></div>
+              </div>
+              <span className="checkbox-label" data-text="HACKTOBERFEST">HACKTOBERFEST</span>
+            </label>
+          </Link>
 
-          <label className="glitch-checkbox-container">
-            <input type="checkbox" name="osci" />
-            <div className="checkbox-box">
-              <div className="checkbox-mark"></div>
-            </div>
-            <span className="checkbox-label" data-text="OPEN_SOURCE_CONNECT_INDIA">OPEN_SOURCE_CONNECT_INDIA</span>
-          </label>
+          <Link href="/osci">
+            <label className="glitch-checkbox-container">
+              <input type="checkbox" name="osci" />
+              <div className="checkbox-box">
+                <div className="checkbox-mark"></div>
+              </div>
+              <span className="checkbox-label" data-text="OPEN_SOURCE_CONNECT_INDIA">OPEN_SOURCE_CONNECT_INDIA</span>
+            </label>
+          </Link>
 
-          <label className="glitch-checkbox-container">
-            <input type="checkbox" name="ssoc" />
-            <div className="checkbox-box">
-              <div className="checkbox-mark"></div>
-            </div>
-            <span className="checkbox-label" data-text="SOCIAL_SUMMER_OF_CODE">SOCIAL_SUMMER_OF_CODE</span>
-          </label>
+          <Link href="/ssoc">
+            <label className="glitch-checkbox-container">
+              <input type="checkbox" name="ssoc" />
+              <div className="checkbox-box">
+                <div className="checkbox-mark"></div>
+              </div>
+              <span className="checkbox-label" data-text="SOCIAL_SUMMER_OF_CODE">SOCIAL_SUMMER_OF_CODE</span>
+            </label>
+          </Link>
         </div>
       </main>
     </div>
