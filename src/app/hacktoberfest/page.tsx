@@ -48,7 +48,7 @@ export default function Hacktoberfest() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#171717] flex items-center justify-center p-8">
+    <div className="min-h-screen bg-[#171717] flex items-center justify-center p-4 md:p-8">
       <div className="wrapper">
         <div className="inner" style={{ "--quantity": prs.length } as React.CSSProperties}>
           {prs.map((pr, index) => (

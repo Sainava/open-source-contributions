@@ -55,7 +55,7 @@ export default function Home() {
         <div className="schoolbag"></div>
       </div>
 
-      <main className="flex w-full max-w-3xl flex-col items-center gap-12 py-32 px-16 relative z-20">
+      <main className="flex w-full max-w-3xl flex-col items-center gap-8 md:gap-12 py-16 md:py-32 px-4 md:px-16 relative z-20">
         <div className="voltage-heading">
           <h1>Open Source Contributions</h1>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 234.6 61.3" preserveAspectRatio="none" xmlSpace="preserve">
