@@ -158,29 +158,32 @@ body {
   height: 300px;
   position: absolute;
   z-index: 10;
-  top: calc(50% - 150px);
+  top: calc(50% - 145px);
   left: calc(50% - 125px);
   animation: astronaut 5s linear infinite;
   pointer-events: none;
-  transform: scale(0.5);
+  transform: scale(1);
   transform-origin: center center;
 }
 
 @media (min-width: 640px) {
   .astronaut {
-    transform: scale(0.6);
+    transform: scale(1.2);
+    top: calc(50% - 165px);
   }
 }
 
 @media (min-width: 768px) {
   .astronaut {
-    transform: scale(0.75);
+    transform: scale(1.4);
+    top: calc(50% - 185px);
   }
 }
 
 @media (min-width: 1024px) {
   .astronaut {
-    transform: scale(1);
+    transform: scale(1.6);
+    top: calc(50% - 205px);
   }
 }
 
@@ -383,10 +386,10 @@ body {
 .voltage-heading h1 {
   color: white;
   background: #0D1127;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
   border-radius: 5rem;
   border: 5px solid #5978F3;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1em;
   letter-spacing: 0.075em;
   transition: background 0.3s;
@@ -395,8 +398,8 @@ body {
 
 @media (min-width: 768px) {
   .voltage-heading h1 {
-    padding: 1.5rem 4rem;
-    font-size: 2rem;
+    padding: 1.25rem 3.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -922,5 +925,154 @@ body {
     transform: translate(0);
     clip-path: inset(0 0 0 0);
   }
+}
+
+/* GitHub Light Button */
+.github-light-button button.bt {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.github-light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20px;
+}
+
+@media (min-width: 768px) {
+  .github-light-button button.bt {
+    height: 200px;
+  }
+  
+  .github-light-button button.bt .button-holder {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.github-light-button button.bt .button-holder svg {
+  height: 35px;
+  fill: #0f0f0f;
+  animation: githubIconGlow 4s ease-in-out infinite;
+}
+
+@keyframes githubIconGlow {
+  0%, 100% {
+    fill: #0f0f0f;
+  }
+  50% {
+    fill: rgba(88, 101, 242, 1);
+  }
+}
+
+@media (min-width: 768px) {
+  .github-light-button button.bt .button-holder svg {
+    height: 50px;
+  }
+}
+
+.github-light-button button.bt .button-holder p {
+  font-size: 0.875rem;
+  margin: 0;
+  margin-top: 0.25rem;
+  animation: githubTextGlow 4s ease-in-out infinite;
+}
+
+@keyframes githubTextGlow {
+  0%, 100% {
+    color: #0f0f0f;
+  }
+  50% {
+    color: rgba(88, 101, 242, 1);
+  }
+}
+
+@media (min-width: 768px) {
+  .github-light-button button.bt .button-holder p {
+    font-size: 1rem;
+  }
+}
+
+.github-light-button button.bt .light-holder {
+  position: absolute;
+  height: 150px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .github-light-button button.bt .light-holder {
+    height: 200px;
+    width: 100px;
+  }
+}
+
+.github-light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.github-light-button button.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+  animation: githubLight 4s ease-in-out infinite;
+}
+
+@keyframes githubLight {
+  0%, 100% {
+    background: transparent;
+  }
+  50% {
+    background: linear-gradient(
+      180deg,
+      rgba(88, 101, 242, 0.9) 0%,
+      rgba(88, 101, 242, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .github-light-button button.bt .light-holder .light {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.github-light-button button.bt:hover .button-holder svg {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.github-light-button button.bt:hover .button-holder {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
 }
 
