@@ -930,7 +930,7 @@ body {
 /* GitHub Light Button */
 .github-light-button button.bt {
   position: relative;
-  height: 150px;
+  height: 120px;
   display: flex;
   align-items: flex-end;
   outline: none;
@@ -944,8 +944,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   background-color: #0a0a0a;
   border-radius: 5px;
   color: #0f0f0f;
@@ -957,17 +957,17 @@ body {
 
 @media (min-width: 768px) {
   .github-light-button button.bt {
-    height: 200px;
+    height: 160px;
   }
   
   .github-light-button button.bt .button-holder {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
   }
 }
 
 .github-light-button button.bt .button-holder svg {
-  height: 35px;
+  height: 30px;
   fill: #0f0f0f;
   animation: githubIconGlow 4s ease-in-out infinite;
 }
@@ -983,7 +983,7 @@ body {
 
 @media (min-width: 768px) {
   .github-light-button button.bt .button-holder svg {
-    height: 50px;
+    height: 45px;
   }
 }
 
@@ -1011,8 +1011,8 @@ body {
 
 .github-light-button button.bt .light-holder {
   position: absolute;
-  height: 150px;
-  width: 80px;
+  height: 120px;
+  width: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1020,8 +1020,8 @@ body {
 
 @media (min-width: 768px) {
   .github-light-button button.bt .light-holder {
-    height: 200px;
-    width: 100px;
+    height: 160px;
+    width: 90px;
   }
 }
 
@@ -1038,8 +1038,8 @@ body {
 .github-light-button button.bt .light-holder .light {
   position: absolute;
   top: 0;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
   background: transparent;
   animation: githubLight 4s ease-in-out infinite;
@@ -1061,8 +1061,8 @@ body {
 
 @media (min-width: 768px) {
   .github-light-button button.bt .light-holder .light {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
   }
 }
 

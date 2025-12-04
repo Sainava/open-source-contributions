@@ -55,7 +55,7 @@ export default function Home() {
         <div className="schoolbag"></div>
       </div>
 
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 md:gap-12 py-16 md:py-32 px-4 md:px-16 relative z-20">
+      <main className="flex w-full max-w-3xl flex-col items-center gap-6 md:gap-10 py-12 md:py-24 px-4 md:px-16 relative z-20">
         <h2 className="author-name text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tracking-wider">
           SAINAVA MODAK
         </h2>
@@ -117,6 +117,16 @@ export default function Home() {
                 <div className="checkbox-mark"></div>
               </div>
               <span className="checkbox-label" data-text="SOCIAL_SUMMER_OF_CODE">SOCIAL_SUMMER_OF_CODE</span>
+            </label>
+          </Link>
+
+          <Link href="/gssoc">
+            <label className="glitch-checkbox-container">
+              <input type="checkbox" name="gssoc" />
+              <div className="checkbox-box">
+                <div className="checkbox-mark"></div>
+              </div>
+              <span className="checkbox-label" data-text="GIRLSCRIPT_SUMMER_OF_CODE_2025">GIRLSCRIPT_SUMMER_OF_CODE_2025</span>
             </label>
           </Link>
         </div>
