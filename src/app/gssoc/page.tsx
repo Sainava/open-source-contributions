@@ -1,11 +1,9 @@
 export default function GSSoC() {
   const prs = [
-    { repo: "tensorflow/tensorflow", title: "Add model optimization", url: "https://github.com/tensorflow/tensorflow/pull/1" },
-    { repo: "pytorch/pytorch", title: "Fix training loop bug", url: "https://github.com/pytorch/pytorch/pull/2" },
-    { repo: "scikit-learn/scikit-learn", title: "Update documentation", url: "https://github.com/scikit-learn/scikit-learn/pull/3" },
-    { repo: "keras-team/keras", title: "Add new layer type", url: "https://github.com/keras-team/keras/pull/4" },
-    { repo: "pandas-dev/pandas", title: "Fix DataFrame bug", url: "https://github.com/pandas-dev/pandas/pull/5" },
-    { repo: "numpy/numpy", title: "Performance improvement", url: "https://github.com/numpy/numpy/pull/6" },
+    { repo: "GollaBharath/Gamify", title: "Fix email case sensitivity in auth", url: "https://github.com/GollaBharath/Gamify/pull/43" },
+    { repo: "Richajaishwal0/Trip_assistant", title: "Add keyboard shortcuts to chatbot", url: "https://github.com/Richajaishwal0/Trip_assistant/pull/121" },
+    { repo: "PROfESSOR-V/CodeDesk", title: "Fix ESM/CommonJS module inconsistency", url: "https://github.com/PROfESSOR-V/CodeDesk/pull/92" },
+    { repo: "ajaynegi45/Old-School-Game", title: "Implement complete Simon Says game", url: "https://github.com/ajaynegi45/Old-School-Game/pull/120" },
   ];
 
   const colors = [
@@ -13,8 +11,6 @@ export default function GSSoC() {
     "142, 252, 204",
     "142, 252, 157",
     "215, 252, 142",
-    "252, 252, 142",
-    "252, 208, 142",
   ];
 
   return (
